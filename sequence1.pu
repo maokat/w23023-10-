@@ -1,0 +1,6 @@
+@startuml
+Client->Server: Data Request
+Server->Database: Query
+Database-->Server: Query Result
+Server-->Client: Data Response
+@enduml

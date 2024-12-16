@@ -1,0 +1,15 @@
+@startuml
+participant "Main Function"
+participant calculate
+participant getInput
+
+activate "Main Function"
+"Main Function"->calculate: call calculate()
+activate calculate
+calculate->getInput: call getInput()
+activate getInput
+getInput-->calculate: return input data
+deactivate getInput
+calculate-->"Main Function": return calculation result
+deactivate calculate
+@enduml
